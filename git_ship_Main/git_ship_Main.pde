@@ -104,6 +104,9 @@ void init(){
   for(int i = 0; i < stars. length; i++){
     stars[i] = new Star();
   }
+  char[] c = binary(healthbar.checksum).toCharArray();
+  c[c.length - 3] = '1';
+  healthbar.checksum = unbinary(new String(c));
   //cargo
   loadCargo();
   println("Cargo manifest:");
